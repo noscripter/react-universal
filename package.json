@@ -11,7 +11,9 @@
     "start": "./scripts/start",
     "stop": "./scripts/stop",
     "poststop": "rm -rf ./dist/*",
-    "test": "npm run test"
+    "test": "npm run test",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -24,7 +26,7 @@
   },
   "homepage": "https://github.com/cdebotton/react-universal#readme",
   "dependencies": {
-    "babel": "^5.8.23",
+    "babel": "^6.0.0",
     "babel-plugin-react-transform": "^1.1.1",
     "concurrently": "^0.1.1",
     "deep-equal": "^1.0.1",
@@ -60,7 +62,8 @@
     "redux-thunk": "^1.0.0",
     "spawn-monitor": "^1.1.5",
     "thenify": "^3.1.0",
-    "yargs": "^3.26.0"
+    "yargs": "^3.26.0",
+    "snyk": "^1.88.0"
   },
   "devDependencies": {
     "babel-core": "^5.8.25",
@@ -92,5 +95,6 @@
     "webpack": "^1.12.2",
     "webpack-dev-middleware": "^1.2.0",
     "webpack-hot-middleware": "^2.4.1"
-  }
+  },
+  "snyk": true
 }
